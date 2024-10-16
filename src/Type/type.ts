@@ -40,11 +40,17 @@ type HomeType = {
 
 type HomeItemType = {
     id:number,
-    title: string,
+    name: string,
     price: number,
     description: string,
-    image: string,
-    category: string
+    imgUrl: string,
+    category: string,
+    count: number,
+    setCount: React.Dispatch<React.SetStateAction<number>>,
+    cartItem : CartItemType[],
+    setCartItem: React.Dispatch<React.SetStateAction<CartItemType[]>>,
+    items:CartItemType[],
+    setItems: React.Dispatch<React.SetStateAction<CartItemType[]>>
 }
 
 type ShopType= {
@@ -113,6 +119,17 @@ type CartType = {
     setCartItem: React.Dispatch<React.SetStateAction<CartItemType[]>>
 }
 
+type BlogsType = {
+    count: number,
+    setCount: React.Dispatch<React.SetStateAction<number>>,
+    click: boolean
+    setClick: React.Dispatch<React.SetStateAction<boolean>>,
+    cartItem : CartItemType[],
+    setCartItem: React.Dispatch<React.SetStateAction<CartItemType[]>>
+    items:CartItemType[],
+    setItems: React.Dispatch<React.SetStateAction<CartItemType[]>>
+}
+
 export type{
     ProductType,
     HomeType,
@@ -124,5 +141,6 @@ export type{
     CartIconType,
     CartItemType,
     CartType,
-    APIType
+    APIType,
+    BlogsType
 }

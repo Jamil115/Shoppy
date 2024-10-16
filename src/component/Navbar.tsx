@@ -5,7 +5,7 @@ import { NavbarType } from "@/Type/type";
 import CartItem from "./CartItem";
 import { formatCurrency } from "@/utilities/formatCurrency";
 
-export default function Navbar({count, setClick, cartItem, setCount, setCartItem, items, setItems, click}: NavbarType) {
+export default function Navbar({ count, setClick, cartItem, setCount, setCartItem, items, setItems, click }: NavbarType) {
     console.log(cartItem)
 
     let amount = 0;
@@ -18,14 +18,20 @@ export default function Navbar({count, setClick, cartItem, setCount, setCartItem
 
 
     return (
-        <div className="flex sticky top-0">
-            <ul className="flex w-11/12 gap-16 py-5 font-semibold">
-                <li className="ml-10"> <Link to={'/'}>Home</Link></li>
-                <li> <Link to={'/shop'}>Shop</Link> </li>
-                <li> <Link to={'/about'}>About</Link> </li>
-            </ul>
+        <div className="flex">
+            <div>
+                <img src="/public/imgs/logo.webp" alt="" className="w-36 -mt-3 -mb-12 ml-4 " />
+            </div>
+            <div className=" w-11/12 flex justify-center ">
+                <ul className="flex gap-16 py-5 font-semibold">
+                    <li className="ml-10"> <Link to={'/'}>Home</Link></li>
+                    <li> <Link to={'/shop'}>Shop</Link> </li>
+                    <li> <Link to={'/about'}>Blogs</Link> </li>
+                    <li> <Link to={'/about'}>About</Link> </li>
+                </ul>
+            </div>
 
-            <div className="sticky top-0 flex shadow-md">
+            <div className="flex">
 
                 <div className="right-0 top-2">
                     <Sheet>

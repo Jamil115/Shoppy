@@ -31,19 +31,19 @@ export default function Home({ count, setClick, cartItem, setCount, setCartItem,
                 <h4 className="font-light mt-2">Autumn Collection New Modern Design</h4>
             </div>
 
-            <div className="grid xl:grid-cols-5 lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 gap-y-5 mx-20 gap-x-2">
+            <div className="grid xl:grid-cols-5 lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 gap-y-5 mx-20 gap-x-2 mb-10">
                 {
                     homeProducts.map((product)=>(
                         <div key={product.id} >
-                            <HomeItem {...product}/>
+                            <HomeItem id={product.id} name={product.title} price={product.price} imgUrl={product.image} category={product.category} description={product.description} count={count} setCount={setCount} cartItem={cartItem} setCartItem={setCartItem} items={items} setItems={setItems} />
                         </div>
                     ))
                 }
             </div>
 
-            {/* <div>
+            <div>
                 <HomeFooter />
-            </div> */}
+            </div>
         </div>
     )
 }

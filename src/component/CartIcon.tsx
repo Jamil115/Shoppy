@@ -4,7 +4,7 @@ import { RiShoppingBag4Line } from "react-icons/ri";
 
 const CartIcon = React.forwardRef<HTMLButtonElement, CartIconType>(({ count, onClick }, ref) => {
     return (
-        <button ref={ref} onClick={onClick} className="h-10 border-2 rounded-lg m-3 mr-14 hover:bg-black text-blue-500 hover:text-white">
+        <button ref={ref} onClick={onClick} className="h-10 border-2 rounded-lg m-3 mr-14  text-black hover:text-blue-700">
             <RiShoppingBag4Line className=" mx-2 text-2xl cursor-pointer" />
 
             {
