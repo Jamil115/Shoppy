@@ -1,15 +1,15 @@
-import { StoreItemType } from "@/Type/type";
+import { ShopItemType } from "@/Type/type";
 import { formatCurrency } from "@/utilities/formatCurrency";
 import { useEffect } from "react";
 
-export function StoreItem({ id, name, price, imgUrl, description, count, setCount, cartItem, setCartItem, items, setItems }: StoreItemType) {
+export function ShopItem({ id, name, price, imgUrl, description, count, setCount, cartItem, setCartItem, items, setItems }: ShopItemType) {
 
     console.log(cartItem)
     let quantity = 0
-    let stat = false;
+    let status = false;
     useEffect(() => {
         cartItem.forEach((item) => (
-            (item.id == id) ? item.stat = true : item
+            (item.id == id) ? item.status = true : item
         ))
         console.log(cartItem)
     }, [cartItem])
@@ -19,7 +19,7 @@ export function StoreItem({ id, name, price, imgUrl, description, count, setCoun
     const handleAddToCart: (id: number) => void = () => {
         setCount(count + 1)
 
-        const newItem = { id, name, price, imgUrl, quantity: 1, stat }
+        const newItem = { id, name, price, imgUrl, quantity: 1, status }
         setCartItem((prevItems) => [...prevItems, newItem])
         setItems((preItems) => [...preItems, newItem])
 
@@ -36,7 +36,7 @@ export function StoreItem({ id, name, price, imgUrl, description, count, setCoun
         if (itemToRemove) {
 
             cartItem.map((item) => (
-                (item.id == id) ? item.stat = false : item
+                (item.id == id) ? item.status = false : item
             ))
             setCount(count - 1);
             setCartItem((prevItems) => prevItems.filter((item) => item.id !== id));
@@ -66,7 +66,7 @@ export function StoreItem({ id, name, price, imgUrl, description, count, setCoun
                 if (item.id === id) {
                     if (item.quantity == 1) {
                         setCount(count - 1)
-                        item.stat = false
+                        item.status = false
                         return 1
                     } else {
                         return { ...item, quantity: item.quantity - 1 }
@@ -80,10 +80,10 @@ export function StoreItem({ id, name, price, imgUrl, description, count, setCoun
 
 
     const itemInCart = cartItem.find((item) => {
-        if (item.stat) {
-            return item.id == id && item.stat
+        if (item.status) {
+            return item.id == id && item.status
         } else {
-            return item.id == id && !item.stat
+            return item.id == id && !item.status
         }
     })
 
@@ -109,7 +109,7 @@ export function StoreItem({ id, name, price, imgUrl, description, count, setCoun
                         :
                         <div>
                             <div className="flex justify-center mt-8">
-                                {(quantity == 1 && stat) ?
+                                {(quantity == 1 && status) ?
                                     <button onClick={() => { decreaseQuantity(id) }} className="bg-blue-600 hover:bg-blue-700 text-white px-2 pb-1 rounded-md text-xl">-</button>
                                     :
                                     <button onClick={() => decreaseQuantity(id)} className="bg-blue-600 hover:bg-blue-700 text-white px-2 pb-1 rounded-md text-xl">-</button>

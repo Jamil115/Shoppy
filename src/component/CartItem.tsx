@@ -15,7 +15,7 @@ export default function CartItem({ id, imgUrl, name, price, quantity, count, set
         console.log(items)
         setItems((prevItems) => (
             prevItems.map((element) => (
-                (element.id === id) ? { ...element, stat: false } : element
+                (element.id === id) ? { ...element, status: false } : element
             ))
 
         ))
@@ -30,7 +30,7 @@ export default function CartItem({ id, imgUrl, name, price, quantity, count, set
     console.log(items)
 
     const itemInCart = items.find((item) => {
-        return item.id == id && item.stat
+        return item.id == id && item.status
     })
     return (
         <div>

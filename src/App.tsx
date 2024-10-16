@@ -1,24 +1,33 @@
 import { RouterProvider, createBrowserRouter } from "react-router-dom"
 import Home from "./pages/Home"
 import About from "./pages/About"
-import { Store } from "./pages/Store"
+import { Shop } from "./pages/Shop"
 import Error404 from "./pages/Error404"
 import { products } from "./Data/data"
+import { useState } from "react"
+import { CartItemType } from "./Type/type"
 
 function App() {
+
+  const [count, setCount] = useState<number>(0)
+  const [click, setClick] = useState<boolean>(false)
+  const [cartItem, setCartItem] = useState<CartItemType[]>([])
+  const [items, setItems] = useState<CartItemType[]>([])
+
+  
   let allRoute = createBrowserRouter(
     [
       {
         path: '/',
-        element: <Home />
+        element: <Home count={count} setCount={setCount} click={click} setClick={setClick} cartItem={cartItem} setCartItem={setCartItem} items={items} setItems={setItems} />
       },
       {
-        path: '/store',
-        element: <Store proList={products} />
+        path: '/shop',
+        element: <Shop proList={products} count={count} setCount={setCount} click={click} setClick={setClick} cartItem={cartItem} setCartItem={setCartItem} items={items} setItems={setItems} />
       },
       {
         path: '/about',
-        element: <About />
+        element: <About count={count} setCount={setCount} click={click} setClick={setClick} cartItem={cartItem} setCartItem={setCartItem} items={items} setItems={setItems} />
       },
       {
         path: '*',
@@ -26,7 +35,7 @@ function App() {
       }
     ]
   )
-
+  
   return (
     <div>
       <RouterProvider router={allRoute} />
