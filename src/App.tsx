@@ -14,7 +14,7 @@ function App() {
   const [click, setClick] = useState<boolean>(false)
   const [cartItem, setCartItem] = useState<CartItemType[]>([])
   const [items, setItems] = useState<CartItemType[]>([])
-  const [quantity, setQuantity] = useState<number>(0)
+  // const [quantity, setQuantity] = useState<number>(0)
 
   
   let allRoute = createBrowserRouter(

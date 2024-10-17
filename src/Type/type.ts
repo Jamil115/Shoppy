@@ -130,7 +130,7 @@ type BlogsType = {
     setCartItem: React.Dispatch<React.SetStateAction<CartItemType[]>>
     items:CartItemType[],
     setItems: React.Dispatch<React.SetStateAction<CartItemType[]>>,
-    filteredBlogs: BlogAPIType
+    // filteredBlogs: BlogAPIType
 }
 
 type BlogItemType = {
