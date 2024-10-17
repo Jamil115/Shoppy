@@ -21,7 +21,7 @@ function App() {
     [
       {
         path: '/',
-        element: <Home count={count} setCount={setCount} click={click} setClick={setClick} cartItem={cartItem} setCartItem={setCartItem} items={items} setItems={setItems} quantity={quantity} setQuantity={setQuantity} />
+        element: <Home count={count} setCount={setCount} click={click} setClick={setClick} cartItem={cartItem} setCartItem={setCartItem} items={items} setItems={setItems}/>
       },
       {
         path: '/shop',

@@ -1,4 +1,4 @@
-import HomeFooter from "@/component/HomeFooter";
+import Footer from "@/component/Footer";
 import HomeItem from "@/component/HomeItem";
 import Navbar from "@/component/Navbar";
 import { APIType, HomeType } from "@/Type/type";
@@ -42,7 +42,7 @@ export default function Home({ count, setClick, cartItem, setCount, setCartItem,
             </div>
 
             <div>
-                <HomeFooter />
+                <Footer />
             </div>
         </div>
     )

@@ -4,7 +4,7 @@ import { IoLogoYoutube } from "react-icons/io";
 import { IoLogoGooglePlaystore } from "react-icons/io5";
 import { PiCopyright } from "react-icons/pi";
 
-export default function HomeFooter() {
+export default function Footer() {
     return (
         <div>
             <div className="grid md:grid-cols-2 sm:grid-cols-1 sm:justify-items-center sm:gap-6 sm:h-44 bg-[#031b3c] h-32">
@@ -33,22 +33,22 @@ export default function HomeFooter() {
                 <div className="mt-16">
                     <p className="font-bold">About</p>
                     <div className="font-light pt-3">
-                        <p className="pb-1">About Us</p>
-                        <p className="pb-1">Delivery Information</p>
-                        <p className="pb-1">Privacy Policy</p>
-                        <p className="pb-1">Terms & Conditions</p>
-                        <p className="pb-1">Contact Us</p>
+                        <p className="pb-1 cursor-pointer">About Us</p>
+                        <p className="pb-1 cursor-pointer">Delivery Information</p>
+                        <p className="pb-1 cursor-pointer">Privacy Policy</p>
+                        <p className="pb-1 cursor-pointer">Terms & Conditions</p>
+                        <p className="pb-1 cursor-pointer">Contact Us</p>
                     </div>
                 </div>
 
                 <div className="mt-16">
                     <p className="font-bold">My Account</p>
                     <div className="font-light pt-3">
-                        <p className="pb-1">Sign in</p>
-                        <p className="pb-1">View Cart</p>
-                        <p className="pb-1">My Wishlist</p>
-                        <p className="pb-1">Track My Order</p>
-                        <p className="pb-1">Help</p>
+                        <p className="pb-1 cursor-pointer">Sign in</p>
+                        <p className="pb-1 cursor-pointer">View Cart</p>
+                        <p className="pb-1 cursor-pointer">My Wishlist</p>
+                        <p className="pb-1 cursor-pointer">Track My Order</p>
+                        <p className="pb-1 cursor-pointer">Help</p>
                     </div>
                 </div>
 

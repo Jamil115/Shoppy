@@ -26,7 +26,7 @@ export default function Navbar({ count, setClick, cartItem, setCount, setCartIte
                 <ul className="flex gap-16 py-5 font-semibold">
                     <li className="ml-10"> <Link to={'/'}>Home</Link></li>
                     <li> <Link to={'/shop'}>Shop</Link> </li>
-                    <li> <Link to={'/about'}>Blogs</Link> </li>
+                    <li> <Link to={'/blogs'}>Blogs</Link> </li>
                     <li> <Link to={'/about'}>About</Link> </li>
                 </ul>
             </div>
