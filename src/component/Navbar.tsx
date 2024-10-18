@@ -5,6 +5,7 @@ import { NavbarType } from "@/Type/type";
 import CartItem from "./CartItem";
 import { formatCurrency } from "@/utilities/formatCurrency";
 import { RiDeleteBin6Line } from "react-icons/ri";
+import logo from "/public/imgs/logo.webp"
 
 export default function Navbar({ count, setClick, cartItem, setCount, setCartItem, items, setItems, click }: NavbarType) {
     console.log(cartItem)
@@ -41,7 +42,7 @@ export default function Navbar({ count, setClick, cartItem, setCount, setCartIte
     return (
         <div className="flex">
             <div>
-                <img src="/public/imgs/logo.webp" alt="" className="w-36 -mt-4 -mb-12 ml-4 " />
+                <img src={logo} alt="" className="w-36 -mt-4 -mb-12 ml-4 " />
             </div>
             <div className=" w-11/12 flex justify-center ">
                 <ul className="flex gap-16 py-5 font-semibold">

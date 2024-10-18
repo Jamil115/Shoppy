@@ -28,7 +28,7 @@ export default function Home({ count, setClick, cartItem, setCount, setCartItem,
 
             <div className="flex flex-col justify-center items-center my-14">
                 <h1 className="text-4xl font-bold font-serif">Featured Products</h1>
-                <h4 className="font-light mt-2">Autumn Collection New Modern Design</h4>
+                <h4 className="font-light mt-2">Winter Collection New Modern Design</h4>
             </div>
 
             <div className="grid xl:grid-cols-5 lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 gap-y-5 mx-20 gap-x-2 mb-10">

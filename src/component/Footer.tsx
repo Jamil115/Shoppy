@@ -3,6 +3,7 @@ import { FaXTwitter } from "react-icons/fa6";
 import { IoLogoYoutube } from "react-icons/io";
 import { IoLogoGooglePlaystore } from "react-icons/io5";
 import { PiCopyright } from "react-icons/pi";
+import logo from "/public/imgs/logo.webp"
 
 export default function Footer() {
     return (
@@ -20,7 +21,7 @@ export default function Footer() {
 
             <div className="grid grid-cols-6 ">
                 <div className="col-span-2">
-                    <img src="/public/imgs/logo.webp" alt="" className="w-36 mt-10 ml-20" />
+                    <img src={logo} alt="" className="w-36 mt-10 ml-20" />
 
                     <p className="font-bold ml-24 mb-2">Contact</p>
                     <p className="font-light ml-24"><span className="font-semibold">Address</span>: 115/A Street no 31, Barcelona, Spain </p>
