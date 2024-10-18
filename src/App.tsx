@@ -37,7 +37,7 @@ function App() {
       },
       {
         path: '*',
-        element: <Error404 count={count} setCount={setCount} click={click} setClick={setClick} cartItem={cartItem} setCartItem={setCartItem} items={items} setItems={setItems}/>
+        element: <Error404 />
       }
     ]
   )
