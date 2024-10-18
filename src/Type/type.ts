@@ -147,6 +147,17 @@ type BlogAPIType = {
     urlToImage: string,
 }
 
+type ErrorType = {
+    count: number,
+    setCount: React.Dispatch<React.SetStateAction<number>>,
+    click: boolean
+    setClick: React.Dispatch<React.SetStateAction<boolean>>,
+    cartItem : CartItemType[],
+    setCartItem: React.Dispatch<React.SetStateAction<CartItemType[]>>
+    items:CartItemType[],
+    setItems: React.Dispatch<React.SetStateAction<CartItemType[]>>
+}
+
 export type{
     ProductType,
     HomeType,
@@ -161,5 +172,6 @@ export type{
     APIType,
     BlogsType,
     BlogItemType,
-    BlogAPIType
+    BlogAPIType,
+    ErrorType
 }
