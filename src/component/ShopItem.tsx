@@ -1,6 +1,7 @@
 import { ShopItemType } from "@/Type/type";
 import { formatCurrency } from "@/utilities/formatCurrency";
 import { useEffect } from "react";
+import { Link } from "react-router-dom";
 
 export function ShopItem({ id, name, price, description, imgUrl, category, count, setCount, cartItem, setCartItem, items, setItems }: ShopItemType) {
     console.log(id, name, price, description, imgUrl, category)
@@ -92,10 +93,15 @@ export function ShopItem({ id, name, price, description, imgUrl, category, count
 
     return (
         <div className="h-[370px] w-[260px] border-2 rounded-xl shadow-lg overflow-hidden flex flex-col justify-between  hover:shadow-2xl">
-            <img src={imgUrl} alt="" className="h-40 py-3 object-contain cursor-pointer" />
+            <Link to={`/${id}`}>
+                <div className="flex justify-center my-auto">
+                    <img src={imgUrl} alt="image" className="h-44 py-3 object-contain cursor-pointer" />
+                </div>
+            </Link>
+            {/* <img src={imgUrl} alt="" className="h-40 py-3 object-contain cursor-pointer" /> */}
             <div className="mt-4">
                 <p className="ml-4 font-light">{category}</p>
-                <p className="ml-4 mr-2 mt-1 font-serif text-rose-600 line-clamp-2 cursor-pointer">{name}</p>
+                <Link to={`/${id}`}><p className="ml-4 mr-2 mt-1 font-serif text-rose-600 line-clamp-2 cursor-pointer">{name}</p></Link>
                 <p className="ml-4  font-bold text-green-600">{formatCurrency(price)}</p>
             </div>
 
@@ -129,7 +135,7 @@ export function ShopItem({ id, name, price, description, imgUrl, category, count
                                 <button onClick={() => increaseQuantity(id)} className="bg-blue-600 hover:bg-blue-700 text-white px-2 pb-1 rounded-md text-xl">+</button>
                             </div> */}
 
-                            
+
 
                             <div className="flex justify-center">
                                 <button onClick={() => { handleRemoveFromCart(id) }} className="bg-red-600 hover:bg-red-700 text-white w-60 px-4 py-1 rounded-lg mt-4 mb-5 font-bold">Remove from Cart</button>

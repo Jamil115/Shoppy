@@ -5,8 +5,9 @@ import { Shop } from "./pages/Shop"
 import Error404 from "./pages/Error404"
 // import { products } from "./Data/data"
 import { useState } from "react"
-import { CartItemType } from "./Type/type"
+import { APIType, CartItemType } from "./Type/type"
 import Blogs from "./pages/Blogs"
+import ProductInfo from "./component/ProductInfo"
 
 function App() {
 
@@ -14,6 +15,8 @@ function App() {
   const [click, setClick] = useState<boolean>(false)
   const [cartItem, setCartItem] = useState<CartItemType[]>([])
   const [items, setItems] = useState<CartItemType[]>([])
+  const [homeProducts, setHomeProducts]= useState<APIType[]>([])
+  const [shopProducts, setShopProducts] = useState<APIType[]>([])
   // const [quantity, setQuantity] = useState<number>(0)
 
   
@@ -21,19 +24,23 @@ function App() {
     [
       {
         path: '/',
-        element: <Home count={count} setCount={setCount} click={click} setClick={setClick} cartItem={cartItem} setCartItem={setCartItem} items={items} setItems={setItems}/>
+        element: <Home count={count} setCount={setCount} click={click} setClick={setClick} cartItem={cartItem} setCartItem={setCartItem} items={items} setItems={setItems} homeProducts={homeProducts} setHomeProducts={setHomeProducts}/>
+      },
+      {
+        path: '/:id',
+        element: <ProductInfo count={count} setCount={setCount} click={click} setClick={setClick} cartItem={cartItem} setCartItem={setCartItem} items={items} setItems={setItems} homeProducts={homeProducts} setHomeProducts={setHomeProducts} shopProducts={shopProducts} setShopProducts={setShopProducts} />
       },
       {
         path: '/shop',
-        element: <Shop count={count} setCount={setCount} click={click} setClick={setClick} cartItem={cartItem} setCartItem={setCartItem} items={items} setItems={setItems} />
+        element: <Shop  count={count} setCount={setCount} click={click} setClick={setClick} cartItem={cartItem} setCartItem={setCartItem} items={items} setItems={setItems} shopProducts={shopProducts} setShopProducts={setShopProducts} />
       },
       {
         path: '/blogs',
-        element: <Blogs count={count} setCount={setCount} click={click} setClick={setClick} cartItem={cartItem} setCartItem={setCartItem} items={items} setItems={setItems} />
+        element: <Blogs  count={count} setCount={setCount} click={click} setClick={setClick} cartItem={cartItem} setCartItem={setCartItem} items={items} setItems={setItems} />
       },
       {
         path: '/about',
-        element: <About count={count} setCount={setCount} click={click} setClick={setClick} cartItem={cartItem} setCartItem={setCartItem} items={items} setItems={setItems} />
+        element: <About  count={count} setCount={setCount} click={click} setClick={setClick} cartItem={cartItem} setCartItem={setCartItem} items={items} setItems={setItems} />
       },
       {
         path: '*',

@@ -2,10 +2,10 @@ import Footer from "@/component/Footer";
 import HomeItem from "@/component/HomeItem";
 import Navbar from "@/component/Navbar";
 import { APIType, HomeType } from "@/Type/type";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 
-export default function Home({ count, setClick, cartItem, setCount, setCartItem, items, setItems, click }: HomeType) {
-    const [homeProducts, setHomeProducts]= useState<APIType[]>([])
+export default function Home({ count, setClick, cartItem, setCount, setCartItem, items, setItems, click, homeProducts, setHomeProducts }: HomeType) {
+    
     useEffect(()=>{
         fetch("https://fakestoreapi.com/products")
         .then(res => res.json())

@@ -2,12 +2,12 @@ import Footer from "@/component/Footer";
 import Navbar from "@/component/Navbar";
 import { PaginationComp } from "@/component/PaginationComp";
 import { ShopItem } from "@/component/ShopItem";
-import { APIType, ShopType } from "@/Type/type";
-import { useEffect, useState } from "react";
+import {  ShopType } from "@/Type/type";
+import { useEffect } from "react";
 
-export function Shop({ count, setClick, cartItem, setCount, setCartItem, items, setItems, click }: ShopType) {
+export function Shop({ count, setClick, cartItem, setCount, setCartItem, items, setItems, click, shopProducts, setShopProducts }: ShopType) {
 
-    const [shopProducts, setShopProducts] = useState<APIType[]>([])
+    
     useEffect(() => {
         fetch("https://fakestoreapi.com/products")
             .then(res => res.json())

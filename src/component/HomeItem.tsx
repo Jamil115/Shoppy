@@ -1,8 +1,9 @@
 import { HomeItemType } from "@/Type/type"
 import { formatCurrency } from "@/utilities/formatCurrency"
 import { useEffect } from "react";
+import { Link } from "react-router-dom";
 
-export default function HomeItem({ id, name, price, description, imgUrl, category, count, setCount, cartItem, setCartItem, items, setItems}: HomeItemType) {
+export default function HomeItem({ id, name, price, description, imgUrl, category, count, setCount, cartItem, setCartItem, items, setItems }: HomeItemType) {
     console.log(id, name, price, description, imgUrl, category)
 
 
@@ -81,6 +82,9 @@ export default function HomeItem({ id, name, price, description, imgUrl, categor
     // }
 
 
+
+
+
     const itemInCart = cartItem.find((item) => {
         if (item.status) {
             return item.id == id && item.status
@@ -92,10 +96,14 @@ export default function HomeItem({ id, name, price, description, imgUrl, categor
 
     return (
         <div className="h-[370px] w-[260px] border-2 rounded-xl shadow-lg overflow-hidden flex flex-col justify-between  hover:shadow-2xl">
-            <img src={imgUrl} alt="" className="h-40 py-3 object-contain cursor-pointer" />
+            <Link to={`/${id}`}>
+                <div className="flex justify-center">
+                    <img src={imgUrl} alt="image" className="h-44 py-3 object-contain cursor-pointer" />
+                </div>
+            </Link>
             <div className="mt-4">
                 <p className="ml-4 font-light">{category}</p>
-                <p className="ml-4 mr-2 mt-1 font-serif text-rose-600 line-clamp-2 cursor-pointer">{name}</p>
+                <Link to={`/${id}`} ><p className="ml-4 mr-2 mt-1 font-serif text-rose-600 line-clamp-2 cursor-pointer">{name}</p></Link>
                 <p className="ml-4  font-bold text-green-600">{formatCurrency(price)}</p>
             </div>
 

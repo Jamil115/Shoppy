@@ -34,7 +34,9 @@ type HomeType = {
     cartItem : CartItemType[],
     setCartItem: React.Dispatch<React.SetStateAction<CartItemType[]>>
     items:CartItemType[],
-    setItems: React.Dispatch<React.SetStateAction<CartItemType[]>>
+    setItems: React.Dispatch<React.SetStateAction<CartItemType[]>>,
+    homeProducts: APIType[],
+    setHomeProducts: React.Dispatch<React.SetStateAction<APIType[]>>
 }
 
 
@@ -63,6 +65,8 @@ type ShopType= {
     setCartItem: React.Dispatch<React.SetStateAction<CartItemType[]>>
     items:CartItemType[],
     setItems: React.Dispatch<React.SetStateAction<CartItemType[]>>,
+    shopProducts: APIType[],
+    setShopProducts: React.Dispatch<React.SetStateAction<APIType[]>>
 }
 
 type ShopItemType={
@@ -147,6 +151,21 @@ type BlogAPIType = {
     urlToImage: string,
 }
 
+type ProductInfoType = {
+    count: number,
+    setCount: React.Dispatch<React.SetStateAction<number>>,
+    click: boolean
+    setClick: React.Dispatch<React.SetStateAction<boolean>>,
+    cartItem : CartItemType[],
+    setCartItem: React.Dispatch<React.SetStateAction<CartItemType[]>>
+    items:CartItemType[],
+    setItems: React.Dispatch<React.SetStateAction<CartItemType[]>>,
+    homeProducts: APIType[],
+    setHomeProducts: React.Dispatch<React.SetStateAction<APIType[]>>,
+    shopProducts: APIType[],
+    setShopProducts: React.Dispatch<React.SetStateAction<APIType[]>>
+}
+
 export type{
     ProductType,
     HomeType,
@@ -161,5 +180,6 @@ export type{
     APIType,
     BlogsType,
     BlogItemType,
-    BlogAPIType
+    BlogAPIType,
+    ProductInfoType
 }
