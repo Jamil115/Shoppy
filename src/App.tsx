@@ -28,7 +28,7 @@ function App() {
       },
       {
         path: '/:id',
-        element: <ProductInfo count={count} setCount={setCount} click={click} setClick={setClick} cartItem={cartItem} setCartItem={setCartItem} items={items} setItems={setItems} homeProducts={homeProducts} setHomeProducts={setHomeProducts} shopProducts={shopProducts} setShopProducts={setShopProducts} />
+        element: <ProductInfo count={count} setCount={setCount} click={click} setClick={setClick} cartItem={cartItem} setCartItem={setCartItem} items={items} setItems={setItems} shopProducts={shopProducts} />
       },
       {
         path: '/shop',

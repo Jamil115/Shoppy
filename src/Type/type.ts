@@ -160,10 +160,7 @@ type ProductInfoType = {
     setCartItem: React.Dispatch<React.SetStateAction<CartItemType[]>>
     items:CartItemType[],
     setItems: React.Dispatch<React.SetStateAction<CartItemType[]>>,
-    homeProducts: APIType[],
-    setHomeProducts: React.Dispatch<React.SetStateAction<APIType[]>>,
-    shopProducts: APIType[],
-    setShopProducts: React.Dispatch<React.SetStateAction<APIType[]>>
+    shopProducts: APIType[]
 }
 
 export type{
