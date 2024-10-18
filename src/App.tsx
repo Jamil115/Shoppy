@@ -3,7 +3,7 @@ import Home from "./pages/Home"
 import About from "./pages/About"
 import { Shop } from "./pages/Shop"
 import Error404 from "./pages/Error404"
-import { products } from "./Data/data"
+// import { products } from "./Data/data"
 import { useState } from "react"
 import { CartItemType } from "./Type/type"
 import Blogs from "./pages/Blogs"
@@ -25,7 +25,7 @@ function App() {
       },
       {
         path: '/shop',
-        element: <Shop proList={products} count={count} setCount={setCount} click={click} setClick={setClick} cartItem={cartItem} setCartItem={setCartItem} items={items} setItems={setItems} />
+        element: <Shop count={count} setCount={setCount} click={click} setClick={setClick} cartItem={cartItem} setCartItem={setCartItem} items={items} setItems={setItems} />
       },
       {
         path: '/blogs',

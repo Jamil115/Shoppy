@@ -54,7 +54,7 @@ type HomeItemType = {
 }
 
 type ShopType= {
-    proList : ProductType,
+    // proList : ProductType,
     count: number,
     setCount: React.Dispatch<React.SetStateAction<number>>,
     click: boolean
