@@ -36,7 +36,8 @@ type HomeType = {
     items:CartItemType[],
     setItems: React.Dispatch<React.SetStateAction<CartItemType[]>>,
     homeProducts: APIType[],
-    setHomeProducts: React.Dispatch<React.SetStateAction<APIType[]>>
+    setHomeProducts: React.Dispatch<React.SetStateAction<APIType[]>>,
+    setShopProducts: React.Dispatch<React.SetStateAction<APIType[]>>
 }
 
 

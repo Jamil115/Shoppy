@@ -4,7 +4,7 @@ import Navbar from "@/component/Navbar";
 import { APIType, HomeType } from "@/Type/type";
 import { useEffect } from "react";
 
-export default function Home({ count, setClick, cartItem, setCount, setCartItem, items, setItems, click, homeProducts, setHomeProducts }: HomeType) {
+export default function Home({ count, setClick, cartItem, setCount, setCartItem, items, setItems, click, homeProducts, setHomeProducts, setShopProducts  }: HomeType) {
     
     useEffect(()=>{
         fetch("https://fakestoreapi.com/products")
@@ -14,6 +14,7 @@ export default function Home({ count, setClick, cartItem, setCount, setCartItem,
                 products.category === "men's clothing" || products.category === "women's clothing"
             )
             setHomeProducts(filteredProducts)
+            setShopProducts(filteredProducts)
         })
     },[])
     console.log(homeProducts)
