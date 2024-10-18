@@ -1,6 +1,7 @@
 import Footer from "@/component/Footer";
 import Navbar from "@/component/Navbar";
 import { AboutType } from "@/Type/type";
+import AboutImg from "/public/imgs/AboutImg.jpg"
 
 export default function About({ count, setClick, cartItem, setCount, setCartItem, items, setItems, click }: AboutType) {
 
@@ -16,7 +17,7 @@ export default function About({ count, setClick, cartItem, setCount, setCartItem
 
             <div className="my-20 flex gap-10">
                 <div className="ml-32">
-                    <img src="/public/imgs/AboutImg.jpg" alt="" className="w-[550px] h-[370px]" />
+                    <img src={AboutImg} alt="" className="w-[550px] h-[370px]" />
                 </div>
                 <div className="mt-10 w-[600px] ">
                     <h1 className="mb-4 font-bold line-clamp-1 text-5xl font-serif">Who we Are?</h1>
